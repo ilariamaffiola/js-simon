@@ -96,7 +96,19 @@ button.addEventListener('click', function(event){
     console.log(checkArr);
     let checkArrLeng = checkArr.length;
     console.log(checkArrLeng);
+    
+    //alla fine il software nel p indicato con id message da la risposta di quanti numeri sono stati indovinati
+    if(checkArrLeng == 0){
+        message.innerText = 'OPS HAI PERSO! RITENTA! HAI INDOVINATO'+' '+checkArrLeng+' '+'NUMERI';
+    }
+    else if(checkArrLeng == 1 || checkArrLeng == 2 ||checkArrLeng == 3 ){
+        message.innerText = 'HAI INDOVINATO'+' '+checkArrLeng+' '+' NUMERI! PUOI FARE DI MEGLIO!';
+    }
+    else if(checkArrLeng == 4){
+        message.innerText = 'BRAVO! HAI INDOVINATO'+' '+checkArrLeng+' '+'NUMERI!! CI SEI QUASI!';
+    }
+    else{
+        message.innerText = 'HAI VINTO!'+' '+'HAI INDOVINATO'+' '+checkArrLeng+' '+'NUMERI!!';
+    }
 });
 
-
-//alla fine il software nel p indicato con id message da la risposta di quanti numeri sono stati indovinati
