@@ -63,12 +63,18 @@ const interval = setInterval(function(){
 let numeri = [];
 for(i=1; i<= 5 ; i++){
     let num;
-    num = Math.floor(Math.random()*100)+1;
+    num = Math.floor(Math.random()*99)+1;
     console.log(num);
     numeri.push(num);
+    
 }
 console.log(numeri);
-//numbers.innerHTML = 
+for(i=0; i<numeri.length ; i++){
+    const li= document.createElement('li');
+    console.log(li);
+    li.append(numeri[i]);
+    numbers.appendChild(li);
+} 
 let seconds = 30;
 const countdownInterval = setInterval(function(){
     //decremento i secondi e li stampo in pagina. se arrivo a 0 fermo l'intervallo e visualizzo l'altra pagina
