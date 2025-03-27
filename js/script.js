@@ -38,32 +38,15 @@ const button = document.querySelector('.btn');
 const message = document.getElementById('message');
 //controllo se ho preso tutto
 //console.log(countdown, istructions, numbers, form, inputs, input, button, message);
-//riprendiamo il countdown della lezione
-/*
-const display = document.getElementById('display');
-let seconds = 10;
 
-const interval = setInterval(function(){
-
-    decremento i secondi e li stampo in pagina. Se arrivo a 0 fermo l'intervallo e cambio messaggio.
-
-    if(seconds != 0){
-        display.innerText = seconds;
-    }
-    else{
-        clearInterval(interval);
-        display.innerText = 'fine';
-    }
-    seconds--;
-}, 1000);
-*/
+//devo far visualizzare in pagina 5 numeri causali con il for e li faccio visualizzare per 30 secondi
 //ricordiamoci come si generano i numeri casuali
 //let dado1 = Math.floor(Math.random()*6)+1;
 //quindi in questo caso sarà
 let numeri = [];
 for(i=1; i<= 5 ; i++){
     let num;
-    num = Math.floor(Math.random()*99)+1;
+    num = Math.floor(Math.random()*50)+1;
     console.log(num);
     numeri.push(num);
     
@@ -75,6 +58,7 @@ for(i=0; i<numeri.length ; i++){
     li.append(numeri[i]);
     numbers.appendChild(li);
 } 
+//dopo i 30 secondi metto il d-none agli elementi indicati su e tolgo il d-none agli elementi indicati
 let seconds = 30;
 const countdownInterval = setInterval(function(){
     //decremento i secondi e li stampo in pagina. se arrivo a 0 fermo l'intervallo e visualizzo l'altra pagina
@@ -90,15 +74,10 @@ const countdownInterval = setInterval(function(){
     }
     seconds--;
 }, 1000);
-
-
-//devo far visualizzare in pagina 5 numeri causali con il for e li faccio visualizzare per 30 secondi
-
-
-
-
-//dopo i 30 secondi metto il d-none agli elementi indicati su e tolgo il d-none agli elementi indicati
-
+//devo fare il controllo dei valori inseriti dall'utente che deve essere registrato quando viene cliccato il bottone, quindi immagino si debba fare l'evento click
+button.addEventListener('click', function(){
+    if()
+})
 
 
 //alla fine il software nel p indicato con id message da la risposta di quanti numeri sono stati indovinati
