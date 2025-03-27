@@ -57,6 +57,18 @@ const interval = setInterval(function(){
     seconds--;
 }, 1000);
 */
+//ricordiamoci come si generano i numeri casuali
+//let dado1 = Math.floor(Math.random()*6)+1;
+//quindi in questo caso sarà
+let numeri = [];
+for(i=1; i<= 5 ; i++){
+    let num;
+    num = Math.floor(Math.random()*100)+1;
+    console.log(num);
+    numeri.push(num);
+}
+console.log(numeri);
+//numbers.innerHTML = 
 let seconds = 30;
 const countdownInterval = setInterval(function(){
     //decremento i secondi e li stampo in pagina. se arrivo a 0 fermo l'intervallo e visualizzo l'altra pagina
@@ -65,10 +77,10 @@ const countdownInterval = setInterval(function(){
     }
     else{
         clearInterval(countdownInterval);
-        //numbers.className = 'd-none';
-        //countdown.className = 'd-none';
-        //istructions.className = 'd-none';
-        //form.classList.remove('d-none');
+        numbers.className = 'd-none';
+        countdown.className = 'd-none';
+        istructions.className = 'd-none';
+        form.classList.remove('d-none');
     }
     seconds--;
 }, 1000);
