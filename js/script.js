@@ -60,7 +60,7 @@ const interval = setInterval(function(){
 let seconds = 30;
 const countdownInterval = setInterval(function(){
     //decremento i secondi e li stampo in pagina. se arrivo a 0 fermo l'intervallo e visualizzo l'altra pagina
-    if(seconds !=0){
+    if(seconds != 0){
         countdown.innerText = seconds;
     }
     else{
@@ -70,7 +70,8 @@ const countdownInterval = setInterval(function(){
         //istructions.className = 'd-none';
         //form.classList.remove('d-none');
     }
-}, 30000);
+    seconds--;
+}, 1000);
 
 
 //devo far visualizzare in pagina 5 numeri causali con il for e li faccio visualizzare per 30 secondi
