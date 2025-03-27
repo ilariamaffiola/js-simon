@@ -59,7 +59,7 @@ for(i=0; i<numeri.length ; i++){
     numbers.appendChild(li);
 } 
 //dopo i 30 secondi metto il d-none agli elementi indicati su e tolgo il d-none agli elementi indicati
-let seconds = 30;
+let seconds = 3;
 const countdownInterval = setInterval(function(){
     //decremento i secondi e li stampo in pagina. se arrivo a 0 fermo l'intervallo e visualizzo l'altra pagina
     if(seconds != 0){
@@ -75,9 +75,28 @@ const countdownInterval = setInterval(function(){
     seconds--;
 }, 1000);
 //devo fare il controllo dei valori inseriti dall'utente che deve essere registrato quando viene cliccato il bottone, quindi immagino si debba fare l'evento click
-button.addEventListener('click', function(){
-    if()
-})
+button.addEventListener('click', function(event){
+    event.preventDefault();
+    //for(let 1=0;i<5; 1++){
+    //console.log parseInt(input[i].value);
+   // }
+    let numeriUtente = [];
+    for(let i=0; i<5; i++){
+        const numero = parseInt(input[i].value);
+        numeriUtente.push(numero);
+    }
+    let checkArr= [];
+    for(let i=0; i<5; i++){
+        let numeroUtente = numeriUtente[i];
+        let numeroCaso = numeri[i];
+        if(numeri.includes(numeroUtente)){
+            checkArr.push(numeroUtente);
+        }    
+    }
+    console.log(checkArr);
+    let checkArrLeng = checkArr.length;
+    console.log(checkArrLeng);
+});
 
 
 //alla fine il software nel p indicato con id message da la risposta di quanti numeri sono stati indovinati
